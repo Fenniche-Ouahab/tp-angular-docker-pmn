@@ -1,13 +1,11 @@
-version: "3.7"
-
+version: "3.5"
 services:
-  tp-angular:
-    container_name: tp-angular
+  angular-pmn: # The name of the service
+    container_name: tp-angular-pmn # Container name
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ".:/app"
-      - "/app/node_modules"
+    volumes: # Volume binding
+      - ".:/usr/src/app"
     ports:
-      - "4201:4200"
+      - "4200:4200" # Port mapping
